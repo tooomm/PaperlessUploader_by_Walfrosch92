@@ -7,8 +7,7 @@
 
 ☕ **Unterstützung willkommen / Support appreciated**  
 **Wenn dir dieses Tool Zeit spart oder du es nützlich findest, freue ich mich über eine kleine Unterstützung.**  
-**If this tool saves you time or you find it helpful, I’d appreciate a small contribution.**  
-👉 [buymeacoffee.com/walfrosch92](https://buymeacoffee.com/walfrosch92)
+**If this tool saves you time or you find it helpful, I’d appreciate a small contribution on [Buy Me a Coffee](https://buymeacoffee.com/walfrosch92).**
 
 ---
 
