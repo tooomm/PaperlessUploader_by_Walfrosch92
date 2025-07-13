@@ -5,7 +5,9 @@ Lade Dokumente direkt aus dem **Windows-Kontextmenü** in deine selbst gehostete
 ---
 
 **☕️ Unterstützung willkommen!**  
-**🇩🇪 Wenn dir dieses Tool Zeit spart oder du es nützlich findest, freue ich mich über eine kleine Unterstützung:**  
+
+** Wenn dir dieses Tool Zeit spart oder du es nützlich findest, freue ich mich über eine kleine Unterstützung:**  
+
 👉 [buymeacoffee.com/walfrosch92](https://buymeacoffee.com/walfrosch92)
 ---
 
@@ -57,8 +59,10 @@ Ein Hinweisfenster informiert über den Erfolg oder Fehler des Uploads.
 Upload documents to your self-hosted [Paperless-ngx](https://github.com/paperless-ngx/paperless-ngx) directly from the **Windows context menu** – no Python, no terminal required.
 
 ---
-**🇬🇧 If this tool saves you time or you find it helpful, I’d appreciate a small contribution:**  
+** If this tool saves you time or you find it helpful, I’d appreciate a small contribution:**  
+
 👉 [buymeacoffee.com/walfrosch92](https://buymeacoffee.com/walfrosch92)
+
 ---
 
 ## ✨ Features
