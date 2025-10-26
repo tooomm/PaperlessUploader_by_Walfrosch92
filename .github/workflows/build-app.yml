@@ -62,7 +62,7 @@ jobs:
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
-        name: PaperlessUploader_${{ matrix.os.split('-')[0] }}
+        name: PaperlessUploader_${{ matrix.os }}
         path: /dist
 
 #    - name: Upload to release
