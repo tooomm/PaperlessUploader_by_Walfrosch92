@@ -40,10 +40,10 @@ jobs:
       shell: bash
       run: |
         if [ "${{ matrix.os }}" = "macos-latest" ]; then
-          pyinstaller --noconsole --onefile --icon=MacOS/icon.ico MacOS/uploader.py
+          pyinstaller --noconsole --onefile --icon=.MacOS/icon.ico MacOS/uploader.py
         fi
         if [ "${{ matrix.os }}" = "windows-latest" ]; then
-          pyinstaller --noconsole --onefile --icon=Windows/icon.ico Windows/uploader.py
+          pyinstaller --noconsole --onefile --icon=.Windows/icon.ico Windows/uploader.py
         fi
 
 #      pip install flake8 pytest
