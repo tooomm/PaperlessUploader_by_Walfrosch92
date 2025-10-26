@@ -60,10 +60,10 @@ jobs:
 #        pytest
 
     - name: Upload artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: PaperlessUploader_${{ matrix.os.split('-')[0] }}
-          path: /dist
+      uses: actions/upload-artifact@v4
+      with:
+        name: PaperlessUploader_${{ matrix.os.split('-')[0] }}
+        path: /dist
 
 #    - name: Upload to release
 #      if: tagged release from main
