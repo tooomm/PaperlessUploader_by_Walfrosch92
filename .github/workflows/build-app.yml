@@ -60,6 +60,7 @@ jobs:
 #        pytest
 
     - name: Print /dist folder content
+      if: ${{ matrix.os == 'macos-latest' }}
       shell: bash
       run: ls ${{ github.workspace }}/dist
 
