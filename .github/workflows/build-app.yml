@@ -37,12 +37,12 @@ jobs:
 
     - name: Build app
       shell: bash
-        run: |
-          if [[ "${{ matrix.os }}" == macos-* ]]; then
-            pyinstaller --noconsole --onefile --icon=MacOS/icon.icns MacOS/uploader.py
-          elif [[ "${{ matrix.os }}" == windows-* ]]; then
-            pyinstaller --noconsole --onefile --icon=Windows/paperless.ico Windows/uploader.py
-          fi
+      run: |
+        if [[ "${{ matrix.os }}" == macos-* ]]; then
+          pyinstaller --noconsole --onefile --icon=MacOS/icon.icns MacOS/uploader.py
+        elif [[ "${{ matrix.os }}" == windows-* ]]; then
+          pyinstaller --noconsole --onefile --icon=Windows/paperless.ico Windows/uploader.py
+        fi
 
 #      pip install flake8 pytest
 #
