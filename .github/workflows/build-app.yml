@@ -67,7 +67,7 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: PaperlessUploader_${{ matrix.os }}
-        path: /dist
+        path: /Users/runner/work/PaperlessUploader_by_Walfrosch92/PaperlessUploader_by_Walfrosch92/dist
 
 #    - name: Upload to release
 #      if: tagged release from main
