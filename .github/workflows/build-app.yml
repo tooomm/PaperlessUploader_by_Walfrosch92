@@ -37,12 +37,12 @@ jobs:
 
     - name: Build app
       shell: bash
-      run: |
-        if [ "${{ matrix.os }}" = "macos-*" ]; then
-          pyinstaller --noconsole --onefile --icon=MacOS/icon.icns MacOS/uploader.py
-        elif [ "${{ matrix.os }}" = "windows-*" ]; then
-          pyinstaller --noconsole --onefile --icon=Windows/paperless.ico Windows/uploader.py
-        fi
+        run: |
+          if [[ "${{ matrix.os }}" == macos-* ]]; then
+            pyinstaller --noconsole --onefile --icon=MacOS/icon.icns MacOS/uploader.py
+          elif [[ "${{ matrix.os }}" == windows-* ]]; then
+            pyinstaller --noconsole --onefile --icon=Windows/paperless.ico Windows/uploader.py
+          fi
 
 #      pip install flake8 pytest
 #
@@ -67,6 +67,7 @@ jobs:
       with:
         name: PaperlessUploader_${{ matrix.os }}
         path: ${{ github.workspace }}/dist
+        if-no-files-found: error
 
 #    - name: Upload to release
 #      if: tagged release from main
