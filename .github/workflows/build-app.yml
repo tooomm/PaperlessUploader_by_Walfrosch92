@@ -13,11 +13,15 @@ jobs:
   Build:
     strategy:
       matrix:
-        os: [macos-latest, windows-latest]
         python-version: ["3.10"]
+        include:
+          - os: macOS
+            image: macos-latest
+          - os: Windows
+            image: windows-latest
       fail-fast: false
 
-    runs-on: ${{ matrix.os }}
+    runs-on: ${{ matrix.image }}
 
     steps:
     - uses: actions/checkout@v5
@@ -38,9 +42,9 @@ jobs:
     - name: Build app
       shell: bash
       run: |
-        if [[ "${{ matrix.os }}" == macos-* ]]; then
+        if [[ "${{ matrix.image }}" == macos-* ]]; then
           pyinstaller --noconsole --onefile --icon=MacOS/icon.icns MacOS/uploader.py
-        elif [[ "${{ matrix.os }}" == windows-* ]]; then
+        elif [[ "${{ matrix.image }}" == windows-* ]]; then
           pyinstaller --noconsole --onefile --icon=Windows/paperless.ico Windows/uploader.py
         fi
 
@@ -58,7 +62,7 @@ jobs:
 #        pytest
 
     - name: Delete .app folder on macOS
-      if: ${{ startsWith(matrix.os, 'macos-') }}
+      if: ${{ startsWith(matrix.image, 'macos-') }}
       shell: bash
       run: rm -rf "${{ github.workspace }}/dist/"*.app
 
