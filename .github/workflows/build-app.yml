@@ -38,10 +38,10 @@ jobs:
     - name: Build app
       shell: bash
       run: |
-        if [ "${{ matrix.os }}" = "macos-latest" ]; then
+        if [ "${{ matrix.os }}" = "macos-*" ]; then
           pyinstaller --noconsole --onefile --icon=MacOS/icon.icns MacOS/uploader.py
         fi
-        if [ "${{ matrix.os }}" = "windows-latest" ]; then
+        elif [ "${{ matrix.os }}" = "windows-*" ]; then
           pyinstaller --noconsole --onefile --icon=Windows/paperless.ico Windows/uploader.py
         fi
 
