@@ -61,13 +61,13 @@ jobs:
 
     - name: Print /dist folder content
       shell: bash
-      run: ls /Users/runner/work/PaperlessUploader_by_Walfrosch92/PaperlessUploader_by_Walfrosch92/dist
+      run: ls ${{ github.workspace }}/dist
 
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: PaperlessUploader_${{ matrix.os }}
-        path: /Users/runner/work/PaperlessUploader_by_Walfrosch92/PaperlessUploader_by_Walfrosch92/dist
+        path: ${{ github.workspace }}/dist
 
 #    - name: Upload to release
 #      if: tagged release from main
