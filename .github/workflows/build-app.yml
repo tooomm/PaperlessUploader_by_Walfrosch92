@@ -11,14 +11,17 @@ permissions:
 
 jobs:
   Build:
+    env:
+      PYTHON_VERSION: "3.10"
     strategy:
       matrix:
-        python-version: ["3.10"]
         include:
           - os: macOS
             image: macos-latest
+            python: ${{ env.PYTHON_VERSION }}
           - os: Windows
             image: windows-latest
+            python: ${{ env.PYTHON_VERSION }}
       fail-fast: false
 
     runs-on: ${{ matrix.image }}
@@ -29,7 +32,7 @@ jobs:
     - name: Set up Python
       uses: actions/setup-python@v6
       with:
-        python-version: ${{ matrix.python-version }}
+        python-version: ${{ matrix.python }}
 #        cache: 'pip'
 
     - name: Install dependencies
