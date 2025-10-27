@@ -40,7 +40,6 @@ jobs:
       run: |
         if [ "${{ matrix.os }}" = "macos-*" ]; then
           pyinstaller --noconsole --onefile --icon=MacOS/icon.icns MacOS/uploader.py
-        fi
         elif [ "${{ matrix.os }}" = "windows-*" ]; then
           pyinstaller --noconsole --onefile --icon=Windows/paperless.ico Windows/uploader.py
         fi
