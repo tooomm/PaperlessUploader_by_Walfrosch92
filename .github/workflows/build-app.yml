@@ -63,7 +63,9 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: PaperlessUploader_${{ matrix.os }}
-        path: ${{ github.workspace }}/dist/uploader*
+        path: |
+          ${{ github.workspace }}/dist
+          !${{ github.workspace }}/dist/*
 
 #    - name: Upload to release
 #      if: tagged release from main
