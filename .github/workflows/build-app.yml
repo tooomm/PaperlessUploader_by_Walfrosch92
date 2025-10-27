@@ -63,7 +63,9 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: PaperlessUploader_${{ matrix.os }}
-        path: ${{ github.workspace }}/dist/*    # only include files directly in the folder and ignore subfolders
+        path: |
+          ${{ github.workspace }}/dist/*    # include files in the folder
+          !${{ github.workspace }}/dist/*/    # ignore files in subfolders
 
 #    - name: Upload to release
 #      if: tagged release from main
