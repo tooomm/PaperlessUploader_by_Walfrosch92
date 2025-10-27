@@ -59,13 +59,16 @@ jobs:
 #      run: |
 #        pytest
 
+    - name: Delete .app folder on macOS
+      if: ${{ matrix.os == 'macos-latest' }}
+      shell: bash
+      run: rm -rf "${{ github.workspace }}/dist/uploader.app"
+
     - name: Upload artifact
       uses: actions/upload-artifact@v4
       with:
         name: PaperlessUploader_${{ matrix.os }}
-        path: |
-          ${{ github.workspace }}/dist
-          !${{ github.workspace }}/dist/*
+        path: ${{ github.workspace }}/dist
 
 #    - name: Upload to release
 #      if: tagged release from main
